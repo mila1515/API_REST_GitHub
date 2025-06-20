@@ -1,6 +1,6 @@
 # GitHub Users API
 
-## 🚀 Présentation du projet
+## Présentation du projet
 
 Ce projet permet d'extraire des utilisateurs GitHub via l'API officielle, de filtrer ces utilisateurs selon des critères avancés, puis d'exposer les données via une API REST sécurisée (FastAPI).
 
@@ -11,7 +11,7 @@ Il illustre :
 
 ---
 
-## 📁 Structure du projet
+## Structure du projet
 
 - **`extract_users.py`**  
   Extraction des utilisateurs GitHub (pagination, gestion du quota, enrichissement des données).  
@@ -39,7 +39,7 @@ Il illustre :
 
 ---
 
-## ▶️ Instructions d'exécution
+## Instructions d'exécution
 
 ### 1. Prérequis
 
@@ -78,7 +78,7 @@ uvicorn api.main:app --reload
 
 ---
 
-## 🔐 Authentification
+## Authentification
 
 - Les routes `/users/search` et `/users/{login}` sont protégées par HTTP Basic Auth.
 - Utilisateur : **admin**
@@ -90,7 +90,7 @@ uvicorn api.main:app --reload
 
 ---
 
-## 🧪 Exemples de requêtes
+## Exemples de requêtes
 
 ### 1. Lister tous les utilisateurs (public)
 ```bash
@@ -104,7 +104,7 @@ curl -u admin:votre_mot_de_passe "http://127.0.0.1:8000/users/search?q=redinov"
 
 ---
 
-## 💻 Utilisation de curl sous Windows / PowerShell
+## Utilisation de curl sous Windows / PowerShell
 
 > **Sous PowerShell**, la commande `curl` est un alias de `Invoke-WebRequest` (et non le vrai curl). Pour utiliser le vrai curl, il faut écrire `curl.exe`.
 
@@ -126,3 +126,37 @@ curl.exe -u admin:votre_mot_de_passe http://127.0.0.1:8000/users/redinov
 ```
 
 > **Astuce** : Sous l'invite de commandes classique (cmd) ou Git Bash, la commande `curl` fonctionne normalement.
+
+
+## Captures d'écran
+
+Voici quelques exemples de l'interface utilisateur et de la documentation interactive générée par Swagger UI :
+
+### 1. Page d'accueil de l'API (après lancement avec `uvicorn api.main:app --reload`)
+![Page d'accueil de l'API](image.png)
+
+### 2. Documentation interactive Swagger UI (`http://127.0.0.1:8000/docs` ou via le lien "Swagger" sur la page d'accueil)
+![Documentation Swagger UI](image-1.png)
+
+## Explications complémentaires
+
+### Fonctionnement général
+
+Cette API permet d'extraire, de filtrer et d'exposer des utilisateurs GitHub de manière structurée et sécurisée. Elle s'appuie sur :
+- L'extraction automatisée d'utilisateurs GitHub (avec gestion de la pagination et du quota d'API).
+- Un filtrage avancé pour ne conserver que les utilisateurs pertinents selon différents critères (bio, avatar, date, etc.).
+- Une API REST moderne, sécurisée par authentification HTTP Basic sur les routes sensibles.
+
+### Interface utilisateur et documentation
+
+- La page d'accueil de l'API présente les principales fonctionnalités et propose des liens rapides vers la documentation interactive (Swagger UI, ReDoc).
+- La documentation interactive permet de tester facilement toutes les routes de l'API, de visualiser les schémas de données, et d'obtenir des exemples de requêtes/réponses.
+
+### Sécurité
+
+- Les routes de recherche et de détail utilisateur sont protégées par une authentification HTTP Basic. Seul l'administrateur (identifiant : `admin`, mot de passe défini dans `.env`) peut y accéder.
+
+### Personnalisation
+
+- Les critères de filtrage peuvent être adaptés dans le script `filtered_users.py` selon vos besoins spécifiques.
+- L'API peut être étendue facilement en ajoutant de nouvelles routes ou en modifiant les modèles dans le dossier `api/`.
