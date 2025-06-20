@@ -13,24 +13,22 @@ Il illustre :
 
 ## Structure du projet
 
- FASTAPI_GITHUB/
-├── extract_users.py               # Script d'extraction depuis l’API GitHub
-├── filtered_users.py              # Script de filtrage métier
+FASTAPI_GITHUB/
+├── extract_users.py
+├── filtered_users.py
 ├── data/
-│   ├── users.json                 # Données brutes extraites
-│   └── filtered_users.json        # Données nettoyées et filtrées
+│ ├── users.json
+│ └── filtered_users.json
 ├── api/
-│   ├── main.py                    # Lancement de l’API FastAPI
-│   ├── models.py                  # Schémas Pydantic
-│   ├── routes.py                  # Endpoints API
-│   ├── security.py                # Gestion de l’authentification
+│ ├── main.py
+│ ├── models.py
+│ ├── routes.py
+│ ├── security.py
 ├── tests/
-│   └── test_api.py                # Tests (facultatif)
-├── requirements.txt              # Dépendances du projet
-├── .env.example                  # Exemple de fichier d’environnement
-└── README.md                     # Documentation complète du projet
-
-
+│ └── test_api.py
+├── requirements.txt
+├── .env.example
+└── README.md
 
 - **`extract_users.py`**  
   Extraction des utilisateurs GitHub (pagination, gestion du quota, enrichissement des données).  
