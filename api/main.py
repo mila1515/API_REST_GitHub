@@ -65,7 +65,7 @@ def read_root():
                 <a href="/docs">Swagger UI</a>
             </div>
             <div class="container">
-                <h1>Bienvenue sur l'API GitHub Users 🚀</h1>
+                <h1>Bienvenue sur l'API GitHub Users </h1>
                 <p>Cette API permet d'explorer des utilisateurs GitHub extraits et filtrés.</p>
                 <ul>
                     <li>🔓 <b>GET</b> <code>/users/</code> — Liste tous les utilisateurs (public)</li>
