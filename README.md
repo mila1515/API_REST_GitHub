@@ -13,22 +13,7 @@ Il illustre :
 
 ## Structure du projet
 
-FASTAPI_GITHUB/
-├── extract_users.py
-├── filtered_users.py
-├── data/
-│ ├── users.json
-│ └── filtered_users.json
-├── api/
-│ ├── main.py
-│ ├── models.py
-│ ├── routes.py
-│ ├── security.py
-├── tests/
-│ └── test_api.py
-├── requirements.txt
-├── .env.example
-└── README.md
+![alt text](image-2.png)
 
 - **`extract_users.py`**  
   Extraction des utilisateurs GitHub (pagination, gestion du quota, enrichissement des données).  
