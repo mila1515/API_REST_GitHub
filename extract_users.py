@@ -15,9 +15,9 @@ Prérequis :
     - Dépendances Python (voir requirements.txt)
     - Fichier .env avec GITHUB_TOKEN
 """
-#_____________________________________________________________________________________________________________
-#_____________________________________________________________________________________________________________
-# ====================Étape 1 : Import des bibliothèques nécessaires =====================
+
+# ==== Import des bibliothèques nécessaires ====
+
 import requests
 import os
 import time
@@ -26,7 +26,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 import argparse
 
-# === Étape 2 : Chargement du token GitHub depuis .env ===
+# ==== Étape 2 : Chargement du token GitHub depuis .env ====
 load_dotenv()
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 if not GITHUB_TOKEN:
