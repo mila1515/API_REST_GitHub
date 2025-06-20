@@ -30,9 +30,7 @@ Il illustre :
 - **`data/`**  
   - `users.json` : utilisateurs bruts extraits.
   - `filtered_users.json` : utilisateurs filtrés, prêts pour l'API.
-
-- **`tests/`**  
-  - `test_api.py` : tests automatiques de l'API.
+  
 
 - **`.gitignore`**  
   - Exclut les environnements virtuels, fichiers sensibles, données, etc.
