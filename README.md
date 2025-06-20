@@ -12,7 +12,6 @@ Il illustre :
 ---
 
 ## Structure du projet
-
 ![alt text](image-2.png)
 
 - **`extract_users.py`**  
